@@ -1,6 +1,4 @@
 import threading
-from multiprocessing import Process
-
 
 def calculate():
     for i in range(300000):
@@ -22,8 +20,6 @@ if __name__ == '__main__':
 
     t1 = threading.Thread(target=calculate)
     t2 = threading.Thread(target=stat)
-    # t1 = Process(target=calculate)
-    # t2 = Process(target=stat)
 
     t1.start()
     t2.start()
